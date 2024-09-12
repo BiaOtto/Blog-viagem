@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400; /* Ajuste aqui para peso padrão */
+    font-style: normal;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d3d3d3;
+    padding: 10px 20px;
+    align-items: center;
+    flex-wrap: wrap; /* Adicionado para permitir quebra de linha */
+}
+
+#logo img {
+    max-width: 150px;
+}
+
+.menu-principal {
+    display: flex;
+    gap: 20px; /* Reduzido para melhor visualização em telas pequenas */
+    list-style: none;
+    font-size: 18px; /* Ajuste para tamanhos menores */
+    font-weight: 300;
+}
+
+.hero {
+    background-image: url(../assents/primeira-viagem-aviao-capa.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    color: #ffffff;
+    width: 100%;
+}
+
+.transparent-cover {
+    background-color: rgba(0,0,0,0.5);
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.transparent-cover h1 {
+    font-size: 2.5rem; /* Ajuste o tamanho do texto */
+    text-align: center; /* Alinha o texto no centro */
+}
+
+.transparent-cover h3 {
+    font-size: 1.25rem; /* Ajuste o tamanho do texto */
+    font-weight: 500;
+    text-align: center; /* Alinha o texto no centro */
+}
+
+.btn {
+    background-color:  #486793;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.8s ease;
+}
+
+.btn:hover {
+    background-color: #a1677d;
+}
+
+.package {
+    padding: 4rem 2rem;
+}
+
+.package h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333333;
+}
+
+.package-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center; /* Adiciona centralização dos itens */
+}
+
+.package-card {
+    background-color: #fdfdfd;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Adiciona overflow escondido para evitar que imagens sejam cortadas */
+    width: 300px; /* Define uma largura fixa */
+    position: relative; /* Adiciona posição relativa para o .category */
+}
+
+.package-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.package-card .category {
+    display: block;
+    position: absolute;
+    background-color: #486793;
+    color: #ffffff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.8rem;
+    margin: -3rem 0 2rem 1rem;
+}
+
+.package-card h3 {
+    font-size: 1.2rem; /* Ajuste o tamanho do texto */
+    color: #333333;
+    margin: 0.8rem 0;
+}
+
+.package-card p {
+    font-size: 0.9rem;
+    color: #666666;
+    margin: 0.8rem 0;
+}
+
+.package-card .prince {
+    display: block;
+    align-items: flex-end;
+    font-size: 1.2rem; /* Ajuste o tamanho do texto */
+    font-weight: 700;
+    margin: 0.8rem 0;
+    color: #db6d97;
+}
+
+.spacing {
+    padding: 0 0.5rem;
+}
+
+.package-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .menu-principal {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .package-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package-card {
+        width: 90%; /* Ajusta a largura do cartão em telas menores */
+    }
+
+    .transparent-cover h1 {
+        font-size: 1.5rem; /* Ajuste o tamanho do texto */
+    }
+
+    .transparent-cover h3 {
+        font-size: 1rem; /* Ajuste o tamanho do texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #logo img {
+        max-width: 100px;
+    }
+
+    .menu-principal {
+        font-size: 16px; /* Ajuste o tamanho do texto */
+    }
+
+    .transparent-cover h1 {
+        font-size: 1.2rem; /* Ajuste o tamanho do texto */
+    }
+
+    .transparent-cover h3 {
+        font-size: 0.875rem; /* Ajuste o tamanho do texto */
+    }
+
+    .package-card {
+        width: 100%; /* Ajusta a largura do cartão em telas muito pequenas */
+    }
+}
+
